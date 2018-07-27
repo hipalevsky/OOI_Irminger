@@ -22,7 +22,7 @@ indup = find(gridded_in.updown > 0);
 % scivars_pair = NaN*ones(m,n,length(indup));
 j = 0; %initialize index grid
 
-for i = 1:length(indup) %for each up profile
+for i = 1:length(indup)-1 %for each up profile
     %if subsequent profile after is down and time between profile starts is less than given tolerance
     if gridded_in.updown(indup(i) + 1) < 0
         if diff(gridded_in.time_start(indup(i): indup(i)+1)) < tol
