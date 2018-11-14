@@ -6,6 +6,7 @@ function [profile_index,updown_index] = profileIndex(depth_in)
 
  ddiff = diff(depth_in);
  profile_index = NaN*ones(length(depth_in),1); %initialize vector
+ updown_index = NaN*ones(1, length(depth_in)); %initialize vector
     profile_index(1:2) = 1; %begin with profile_index = 1;
     
  for i = 3:length(depth_in)
